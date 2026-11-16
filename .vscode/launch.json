@@ -1,0 +1,36 @@
+{
+  // Run and Debug (Ctrl+Shift+D) -> pick a configuration -> F5.
+  // Needs the "Python" and "Python Debugger" extensions, and the project's venv selected as interpreter.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "CodeClash server (MacBook)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "server.main_server",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "CodeClash player app (Streamlit)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "streamlit",
+      "args": ["run", "app.py", "--server.address", "127.0.0.1", "--server.port", "8501"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "CodeClash tests (all)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "unittest",
+      "args": ["-v", "tests.test_protocol", "tests.test_questions", "tests.test_server_integration",
+               "tests.test_network_manager", "tests.test_ui_app"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

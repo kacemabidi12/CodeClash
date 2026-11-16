@@ -1,0 +1,22 @@
+# Virtual environments (each computer creates its own — never copy or commit)
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Runtime data
+server/data/
+client_settings.json
+*.log
+
+# Editors / OS (the shared VS Code launch configurations are kept)
+.vscode/*
+!.vscode/launch.json
+.idea/
+.DS_Store
+Thumbs.db

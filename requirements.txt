@@ -1,0 +1,4 @@
+# Client computers (Windows) need Streamlit for the UI.
+# The server (MacBook) uses only the Python standard library — no install required there.
+# st.fragment(run_every=...) and st.rerun(scope="app") need Streamlit 1.37 or newer.
+streamlit>=1.37,<2

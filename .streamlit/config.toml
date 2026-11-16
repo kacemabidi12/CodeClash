@@ -1,0 +1,25 @@
+# Streamlit settings for every client computer (read automatically when you run from the project folder).
+
+[server]
+# The player UI is only for this computer's browser: never exposed to the LAN.
+address = "127.0.0.1"
+port = 8501
+# headless: no first-run "Email:" prompt in the terminal. The start scripts open the browser.
+headless = true
+# Serves ./static (the bundled fonts) at /app/static/...
+enableStaticServing = true
+
+[browser]
+gatherUsageStats = false
+serverAddress = "localhost"
+
+[client]
+toolbarMode = "minimal"
+
+[theme]
+base = "dark"
+primaryColor = "#3D8BFF"
+backgroundColor = "#0A0F1F"
+secondaryBackgroundColor = "#121A2E"
+textColor = "#E6ECFF"
+font = "sans serif"
